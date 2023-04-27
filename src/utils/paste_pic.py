@@ -62,6 +62,7 @@ def paste_pic(video_path, pic_path, crop_info, new_audio_path, full_video_path, 
             # pp = np.uint8(cv2.resize(np.clip(img, 0, 255), (width, height)))
             # pp, orig_faces, enhanced_faces = enhancer.process(pp, full_img_list[index], bbox=[cly, cry, clx, crx],
             #                                                   face_enhance=False, possion_blending=True)
+            pp = ff
             cropped_faces, restored_faces, pp = restorer.enhance(
                 pp, has_aligned=False, only_center_face=True, paste_back=True)
 
