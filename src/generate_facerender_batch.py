@@ -8,7 +8,7 @@ from glob import glob
 
 
 def get_facerender_data(coeff_path, pic_path, first_coeff_path, audio_path, batch_size, device):
-    semantic_radius = 6
+    semantic_radius = 13
     video_name = os.path.splitext(os.path.split(coeff_path)[-1])[0]
     txt_path = os.path.splitext(coeff_path)[0]
 
