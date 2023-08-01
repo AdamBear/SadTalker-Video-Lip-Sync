@@ -8,6 +8,8 @@ from src.facerender.animate import AnimateFromCoeff
 from src.generate_batch import get_data
 from src.generate_facerender_batch import get_facerender_data
 #from third_part.GFPGAN.gfpgan import GFPGANer
+from third_part.codeformer import CodeFormerFaceEnhancement
+
 from third_part.GPEN.gpen_face_enhancer import FaceEnhancement
 import warnings
 import time
@@ -59,7 +61,8 @@ def main(args):
 
     # restorer_model = GFPGANer(model_path='checkpoints/GFPGANv1.4.pth', upscale=1, arch='clean',
     #                           channel_multiplier=2, bg_upsampler=None)
-    restorer_model = None
+    restorer_model = CodeFormerFaceEnhancement()
+
     enhancer_model = FaceEnhancement(base_dir='checkpoints', size=512, model='GPEN-BFR-512', use_sr=False,
                                      sr_model='rrdb_realesrnet_psnr', channel_multiplier=2, narrow=1, device=device)
 
