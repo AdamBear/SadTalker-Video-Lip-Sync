@@ -70,7 +70,6 @@ def get_facerender_data(coeff_path, pic_path, first_coeff_path, audio_path, batc
     data['target_semantics_list'] = torch.FloatTensor(target_semantics_np)
     data['video_name'] = video_name
     data['audio_path'] = audio_path
-    data['full_img_list'] = images_list
     return data
 
 
