@@ -30,7 +30,7 @@ class SadTalker():
         
         self.device = device
 
-        os.environ['TORCH_HOME']= checkpoint_path
+        os.environ['TORCH_HOME'] = checkpoint_path
 
         self.checkpoint_path = checkpoint_path
       
