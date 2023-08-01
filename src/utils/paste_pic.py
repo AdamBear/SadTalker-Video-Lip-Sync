@@ -42,7 +42,7 @@ def paste_pic(video_path, pic_path, crop_info, new_audio_path, full_video_path, 
 
         ff = full_img_list[index].copy()
         ff[cly:cry, clx:crx] = p
-        if enhancer_region == 'none' and restorer is not None:
+        if enhancer_region == 'none' or restorer is None:
             pp = ff
         else:
             cropped_faces, restored_faces, restored_img = restorer.enhance(
